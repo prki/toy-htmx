@@ -21,3 +21,14 @@ ul {
     flex: 1;
     padding: 20px;
 }
+
+.warning-parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warning-content {
+    background: #ffc107;
+    padding: 10px;
+}
