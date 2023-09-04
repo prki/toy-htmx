@@ -1,0 +1,23 @@
+/* reset browser behavior */
+body,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* full viewport*/
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: aliceblue;
+    padding: 20px;
+}
+
+#content {
+    flex: 1;
+    padding: 20px;
+}

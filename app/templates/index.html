@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <title>Toy HTMX app</title>
+  <script src="https://unpkg.com/htmx.org@1.9.5"
+    integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="sidebar" hx-get="/navbar" hx-trigger="load">
+    </nav>
+    <div id="content">
+      <p>This is a toy HTMX app.</p>
+
+      <p>The navbar on the left-hand side is obtained via an AJAX GET request without
+        any user-based trigger, upon loading the page. Navbar could be defined statically,
+        but for demo and test purposes, it is loaded via another request to simulate a JS
+        framework-like "component" behavior.
+      </p>
+      <p>
+        This content is completely static and there is no way to access it again, as there
+        is no swapping behavior defined.
+      </p>
+    </div>
+  </div>
+
+</body>
+
+</html>

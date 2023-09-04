@@ -1,0 +1,12 @@
+<p>
+  I am ingredients partial template. The button bellow will execute an AJAX GET
+  request and fill out ingredient list.
+</p>
+<p>
+  This page shows how it is possible to have a partial page with underlying AJAX requests underneath.
+</p>
+<button hx-get="/ingredient-list" hx-trigger="click" hx-target="#ingredient-list" hx-swap="outerHTML">
+  Get ingredients
+</button>
+<!--Placeholder to be swapped with result.-->
+<div id="ingredient-list" />
