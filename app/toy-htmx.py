@@ -39,6 +39,16 @@ def get_document():
     return render_template("partials/document.html")
 
 
+@app.get("/errors")
+def errors():
+    return render_template("partials/errors/error.html")
+
+
+@app.get("/errors/warning")
+def error_warning():
+    return render_template("partials/errors/partials/warning.html")
+
+
 @app.route("/")
 def hello_world():
     return render_template("index.html")

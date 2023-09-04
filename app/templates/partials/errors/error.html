@@ -1,0 +1,18 @@
+<p>This is a page showing various errors/warnings and how those can be visualized.</p>
+
+<p>The button below will create new content and add it at the beginning of the
+  content div, so that no content is overwritten but a failure can be displayed.
+</p>
+
+<button hx-get="/errors/warning" hx-trigger="click" hx-target="#content" hx-swap="afterbegin">
+  Show warning
+</button>
+
+<script>
+  function deleteWarning(button) {
+    const warningParent = button.closest('.warning-parent');
+    if (warningParent) {
+      warningParent.remove();
+    }
+  }
+</script>
